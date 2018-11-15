@@ -1,0 +1,77 @@
+(intervalo
+  (semitono 0)
+  (nombre unísono)
+  (simbolo null)
+)
+
+(intervalo
+  (semitono 1)
+  (nombre segundaMenor)
+  (simbolo 2m)
+)
+
+(intervalo
+  (semitono 2)
+  (nombre segundaMayor)
+  (simbolo 2M)
+)
+
+(intervalo
+  (semitono 3)
+  (nombre terceraMenor)
+  (simbolo 3m)
+)
+
+(intervalo
+  (semitono 4)
+  (nombre terceraMayor)
+  (simbolo 3M)
+)
+
+(intervalo
+  (semitono 5)
+  (nombre cuartaJusta)
+  (simbolo 4J)
+)
+
+(intervalo
+  (semitono 6)
+  (nombre null)
+  (simbolo null)
+)
+
+(intervalo
+	(semitono 7)
+	(nombre quintaJusta)
+	(simbolo 5J)
+)
+
+(intervalo
+	(semitono 8)
+	(nombre sextaMenor)
+	(simbolo 6m)
+)
+
+(intervalo
+	(semitono 9)
+	(nombre sextaMayor)
+	(simbolo 6M)
+)
+
+(intervalo
+	(semitono 10)
+	(nombre septimaMenor)
+	(simbolo 7m)
+)
+
+(intervalo
+	(semitono 11)
+	(nombre septimaMayor)
+	(simbolo 7M)
+)
+
+(intervalo
+	(semitono 12)
+	(nombre octavaJusta)
+	(simbolo 8J)
+)

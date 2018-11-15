@@ -1,0 +1,89 @@
+(notacion
+    (indice -7)
+	  (nombre Dob)
+	  (altura 2)
+)
+
+(notacion
+    (indice -6)
+    (nombre Solb)
+    (altura 2)
+)
+
+(notacion
+    (indice -5)
+    (nombre Reb)
+    (altura 2)
+)
+
+(notacion
+    (indice -4)
+    (nombre Lab)
+    (altura 2)
+)
+
+(notacion
+    (indice -3)
+    (nombre Mib)
+    (altura 2)
+)
+
+(notacion
+    (indice -2)
+    (nombre Sib)
+    (altura 2)
+)
+
+(notacion
+    (indice -1)
+    (nombre Fa)
+    (altura 2)
+)
+
+(notacion
+    (indice 0)
+	(nombre Do)
+	(altura 2)
+)
+
+(notacion
+    (indice 1)
+    (nombre Sol)
+    (altura 2)
+)
+
+(notacion
+    (indice 2)
+    (nombre Re)
+    (altura 2)
+)
+
+(notacion
+    (indice 3)
+    (nombre La)
+    (altura 2)
+)
+
+(notacion
+    (indice 4)
+    (nombre Mi)
+    (altura 3)
+)
+
+(notacion
+    (indice 5)
+    (nombre Si)
+    (altura 2)
+)
+
+(notacion
+    (indice 6)
+    (nombre Fa#)
+    (altura 2)
+)
+
+(notacion
+    (indice 7)
+    (nombre Do#)
+    (altura 2)
+)

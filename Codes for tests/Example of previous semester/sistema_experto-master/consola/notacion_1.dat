@@ -1,0 +1,89 @@
+(notacion
+  	(indice -7)
+		(nombre Cb)
+		(altura 2)
+)
+
+(notacion
+    (indice -6)
+    (nombre Gb)
+    (altura 2)
+)
+
+(notacion
+    (indice -5)
+    (nombre Db)
+    (altura 2)
+)
+
+(notacion
+    (indice -4)
+    (nombre Ab)
+    (altura 2)
+)
+
+(notacion
+    (indice -3)
+    (nombre Eb)
+    (altura 2)
+)
+
+(notacion
+    (indice -2)
+    (nombre Bb)
+    (altura 2)
+)
+
+(notacion
+    (indice -1)
+    (nombre F)
+    (altura 2)
+)
+
+(notacion
+    (indice 0)
+	  (nombre C)
+	  (altura 2)
+)
+
+(notacion
+    (indice 1)
+    (nombre G)
+    (altura 2)
+)
+
+(notacion
+    (indice 2)
+    (nombre D)
+    (altura 2)
+)
+
+(notacion
+    (indice 3)
+    (nombre A)
+    (altura 2)
+)
+
+(notacion
+    (indice 4)
+    (nombre E)
+    (altura 3)
+)
+
+(notacion
+    (indice 5)
+    (nombre B)
+    (altura 2)
+)
+
+(notacion
+    (indice 6)
+    (nombre F#)
+    (altura 2)
+)
+
+(notacion
+    (indice 7)
+    (nombre C#)
+    (altura 2)
+)
