@@ -11,6 +11,11 @@
 ;;   Alonso Rivas
 ;; November, 2018
 ;; 
+;; How to run?
+;; 	 1. File>Open> Select the file "Main.CLP"
+;;   2. CLIPS> (load Main.CLP)
+;;   3. CLIPS> (reset)
+;;   4. CLIPS> (run)
 ;; 
 ;; *Based in the "Auto.clp" example created by http://www.clipsrules.net/
 
