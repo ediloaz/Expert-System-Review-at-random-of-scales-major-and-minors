@@ -23,7 +23,7 @@
 ;; 
 
 (deffunction ask-question (?question $?allowed-values)
-   (printout t crlf ?question)
+   (printout t ?question)
    (bind ?answer (read))
    (if (lexemep ?answer) 
        then (bind ?answer (lowcase ?answer)))
@@ -60,7 +60,7 @@
    (test (<= 5 ?number))
    =>
    (assert (sharp-or-flat
-      (ask-question "Do you want the scale in sharps (s) or flats (f)? : "
+      (ask-question "Do you want the scale in sharps or flats? : "
                     sharps flats))
    )
 )
@@ -134,7 +134,7 @@
 
 (defrule get-ball-value-5-sharp ""
    (ball-value 5)
-   (sharp-or-flat sostenidos)
+   (sharp-or-flat sharps)
    (not (response ?))
    =>
    (assert (response "The ball is 5"))
@@ -145,24 +145,24 @@
 
 (defrule get-ball-value-6-sharp ""
    (ball-value 6)
-   (sharp-or-flat sostenidos)
+   (sharp-or-flat sharps)
    (not (response ?))
    =>
    (assert (response "The ball is 6"))
    (assert (major-scale yes))
    (assert (minor-scale no))
-   (assert (scale "Fa sostenido"))
+   (assert (scale "Fa sharp"))
 )
 
 (defrule get-ball-value-7-sharp ""
    (ball-value 7)
-   (sharp-or-flat sostenidos)
+   (sharp-or-flat sharps)
    (not (response ?))
    =>
    (assert (response "The ball is 7"))
    (assert (major-scale yes))
    (assert (minor-scale no))
-   (assert (scale "Do sostenido"))
+   (assert (scale "Do sharp"))
 )
 
 (defrule get-ball-value-5-flat ""
@@ -203,7 +203,7 @@
   (ball-value ?)
   (response ?)
    =>
-   (assert (scale "Do bemol"))
+   (assert (scale "Do flat"))
 )
 
 (defrule getScale6 ""
@@ -211,7 +211,7 @@
   (ball-value ?)
   (response ?)
    =>
-   (assert (scale "Sol bemol"))
+   (assert (scale "Sol flat"))
 )
 
 (defrule getScale7 ""
@@ -219,7 +219,7 @@
   (ball-value ?)
   (response ?)
    =>
-   (assert (scale "Re bemol"))
+   (assert (scale "Re flat"))
 )
 
 
@@ -276,7 +276,7 @@
   (ball-value ?)
   (response ?)
    =>
-   (assert (scale "La bemol"))
+   (assert (scale "La flat"))
 )
 
 (defrule getScale9 ""
@@ -284,7 +284,7 @@
   (ball-value ?)
   (response ?)
    =>
-   (assert (scale "Mi bemol"))
+   (assert (scale "Mi flat"))
 )
 
 (defrule getScale10 ""
@@ -292,7 +292,7 @@
   (ball-value ?)
   (response ?)
    =>
-   (assert (scale "Si bemol"))
+   (assert (scale "Si flat"))
 )
 
 (defrule getScale11 ""
@@ -337,7 +337,7 @@
    (assert (calc13-23 (- 13 12)))
    (assert (major-scale no))
    (assert (minor-scale yes))   
-   (assert (sharp-or-flat sostenidos))
+   (assert (sharp-or-flat sharps))
 )
 
 (defrule getScale13 ""
@@ -356,7 +356,7 @@
    (assert (calc13-23 (- 14 12)))
    (assert (major-scale no))
    (assert (minor-scale yes))  
-   (assert (sharp-or-flat sostenidos))
+   (assert (sharp-or-flat sharps))
 )
 
 (defrule getScale14 ""
@@ -375,7 +375,7 @@
    (assert (calc13-23 (- 15 12)))
    (assert (major-scale no))
    (assert (minor-scale yes))   
-   (assert (sharp-or-flat sostenidos))  
+   (assert (sharp-or-flat sharps))  
 )
 
 (defrule getScale15 ""
@@ -394,7 +394,7 @@
    (assert (calc13-23 (- 16 12)))
    (assert (major-scale no))
    (assert (minor-scale yes))  
-   (assert (sharp-or-flat sostenidos))   
+   (assert (sharp-or-flat sharps))   
 )
 
 (defrule getScale16 ""
@@ -408,7 +408,7 @@
 
 (defrule get-ball-value-17-sharp ""
    (ball-value 17)
-   (sharp-or-flat sostenidos)
+   (sharp-or-flat sharps)
    (not (response ?))
    =>
    (assert (response "The ball is 17"))
@@ -448,7 +448,7 @@
 
 (defrule get-ball-value-18-sharp ""
    (ball-value 18)
-   (sharp-or-flat sostenidos)
+   (sharp-or-flat sharps)
    (not (response ?))
    =>
    (assert (response "The ball is 18"))
@@ -488,7 +488,7 @@
 
 (defrule get-ball-value-19-sharp ""
    (ball-value 19)
-   (sharp-or-flat sostenidos)
+   (sharp-or-flat sharps)
    (not (response ?))
    =>
    (assert (response "The ball is 19"))
@@ -626,6 +626,12 @@
 
 
 
+;; 
+;; █▀▀▀█ █▀▀ █▀▀█ █   █▀▀ █▀▀ 
+;; ▀▀▀▄▄ █   █▄▄█ █   █▀▀ ▀▀█ 
+;; █▄▄▄█ ▀▀▀ ▀  ▀ ▀▀▀ ▀▀▀ ▀▀▀ 
+;; 
+
 (defrule scale-C ""
    (relative C)
    (response ?)
@@ -684,12 +690,11 @@
 
 
 
-
-
-
-;;;********************************
-;;;* STARTUP AND CONCLUSION RULES *
-;;;********************************
+;; 
+;;  █▀▀█ █▀▀█  ▀  █▀▀▄ ▀▀█▀▀ █▀▀ 
+;;  █▄▄█ █▄▄▀ ▀█▀ █  █   █   ▀▀█ 
+;;  █    ▀ ▀▀ ▀▀▀ ▀  ▀   ▀   ▀▀▀ 
+;; 
 
 (defrule print-response-Major ""
   (declare (salience 10))
@@ -698,7 +703,7 @@
   (scale       ?scale)
   =>
   (printout t crlf crlf)
-  (format t " Escala:  %s Mayor %n%n%n " ?scale)
+  (format t " Scale:  %s major %n%n%n " ?scale)
 )
 
 (defrule print-response-Minor-YesFrontier ""
@@ -709,7 +714,7 @@
   (not (20-23-balls ?))
   =>
   (printout t crlf crlf)
-  (format t " Escala:  %s Menor %n%n%n " ?scale)
+  (format t " Scale:  %s minor %n%n%n " ?scale)
 )
 
 (defrule print-response-Minor-NoFrontierSharp ""
@@ -717,10 +722,10 @@
   (minor-scale yes)
   (scale       ?scale)
   (frontier no)
-  (sharp-or-flat sostenidos)
+  (sharp-or-flat sharps)
   =>
   (printout t crlf crlf)
-  (format t " Escala:  %s Sostenido Menor %n%n%n " ?scale)
+  (format t " Scale:  %s minor sharp %n%n%n " ?scale)
 )
 
 (defrule print-response-Minor-NoFrontierFlat ""
@@ -732,7 +737,7 @@
   (20-23-balls yes)
   =>
     (printout t crlf crlf)
-    (format t " Escala:  %s Menor %n%n%n " ?scale)
+    (format t " Scale:  %s minor %n%n%n " ?scale)
 )
 
 (defrule print-response-Minor-NoFrontierFlat1 ""
@@ -744,7 +749,7 @@
   (20-23-balls yes)
   =>
     (printout t crlf crlf)
-    (format t " Escala:  %s Menor %n%n%n " ?scale)
+    (format t " Scale:  %s minor %n%n%n " ?scale)
 )
 
 (defrule print-response-Minor-yesFrontierFlat2 ""
@@ -756,7 +761,7 @@
   (20-23-balls no)
   =>
     (printout t crlf crlf)
-    (format t " Escala:  %s Bemol Menor %n%n%n " ?scale)
+    (format t " Scale:  %s minor flat %n%n%n " ?scale)
 )
 
 (defrule print-response-Minor-yesFrontiersharp ""
@@ -764,9 +769,9 @@
   (minor-scale yes)
   (scale       ?scale)
   (frontier yes)
-  (sharp-or-flat sostenidos)
+  (sharp-or-flat sharps)
   (20-23-balls no)
   =>
     (printout t crlf crlf)
-    (format t " Escala:  %s Sostenido Menor %n%n%n " ?scale)
+    (format t " Scale:  %s minor sharp %n%n%n " ?scale)
 )
